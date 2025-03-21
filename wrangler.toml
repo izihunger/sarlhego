@@ -14,6 +14,6 @@ zone_name = "axelhego.fr"
 custom_domain = true
 
 [[routes]]
-pattern = "sarlhego.axelhego.fr/*"
+pattern = "sarlhego.axelhego.fr/cuisine"
 zone_name = "axelhego.fr"
 custom_domain = true
