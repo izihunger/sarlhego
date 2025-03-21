@@ -7,13 +7,9 @@ upload_source_maps = false
 [assets]
 directory = "./build"
 html_handling = "force-trailing-slash"
+not_found_handling = "single-page-application"
 
 [[routes]]
 pattern = "sarlhego.axelhego.fr"
-zone_name = "axelhego.fr"
-custom_domain = true
-
-[[routes]]
-pattern = "sarlhego.axelhego.fr/cuisine"
 zone_name = "axelhego.fr"
 custom_domain = true
