@@ -9,6 +9,6 @@ directory = "./build"
 html_handling = "force-trailing-slash"
 
 [[routes]]
-pattern = "sarlhego.axelhego.fr/"
+pattern = "sarlhego.axelhego.fr"
 zone_name = "axelhego.fr"
 custom_domain = true
