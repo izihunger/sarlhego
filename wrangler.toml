@@ -3,6 +3,8 @@ compatibility_date = "2025-03-21"
 
 workers_dev = false
 
+assets = { directory = "./build"}
+
 [[routes]]
-pattern = "sarlhego.axel-hego-thb.workers.dev/*"
+pattern = "sarlhego.axelhego.fr/*"
 custom_domain = false
