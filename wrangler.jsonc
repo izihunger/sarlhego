@@ -1,0 +1,8 @@
+{
+    "name": "site-vitrine",
+    "compatibility_date": "2025-03-21",
+    "main": "build/static/js/main.14f9729c.js",
+    "assets": {
+        "directory": "./build"
+    }
+}
