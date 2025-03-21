@@ -1,0 +1,8 @@
+name = "sarlhego"
+compatibility_date = "2025-03-21"
+
+workers_dev = false
+
+[[routes]]
+pattern = "sarlhego.axel-hego-thb.workers.dev/*"
+custom_domain = false
