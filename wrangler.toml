@@ -12,3 +12,8 @@ html_handling = "force-trailing-slash"
 pattern = "sarlhego.axelhego.fr"
 zone_name = "axelhego.fr"
 custom_domain = true
+
+[[routes]]
+pattern = "sarlhego.axelhego.fr/*"
+zone_name = "axelhego.fr"
+custom_domain = true
