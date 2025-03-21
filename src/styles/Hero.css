@@ -1,0 +1,108 @@
+.hero {
+  background: url('../assets/hero-bg.png') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 0 1rem;
+  padding-top: 60px; /* Account for Navbar height */
+  position: relative;
+  overflow: hidden; /* Ensure the zoomed background doesn't overflow */
+}
+
+/* Animation for zooming effect */
+@keyframes zoom {
+  0% {
+    transform: scale(1); /* Start at normal size */
+  }
+  50% {
+    transform: scale(1.3); /* Zoom in to 110% */
+  }
+  100% {
+    transform: scale(1); /* Return to normal size */
+  }
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
+  z-index: 1; /* Ensure the overlay is above the background */
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../assets/hero-bg.png') no-repeat center center/cover;
+  z-index: 0; /* Place it behind the overlay */
+  animation: zoom 20s infinite ease-in-out; /* Apply the zoom animation */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2; /* Ensure content is above the overlay and background */
+}
+
+.hero-logo {
+  width: 400px; /* Adjust the size of the logo */
+  margin-bottom: 1rem; /* Space between logo and text */
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.hero button {
+  padding: 0.8rem 2rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.hero button:hover {
+  background-color: #555;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 50px; /* Adjust padding for mobile */
+  }
+
+  .hero-logo {
+    width: 120px; /* Smaller logo for mobile */
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .hero button {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}

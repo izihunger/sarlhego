@@ -1,0 +1,108 @@
+.about {
+  padding: 2rem;
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.1);
+  margin: 4rem;
+  border-radius: 10px;
+  background-color: #7f8577;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.left {
+  flex-direction: row-reverse;
+}
+
+.about-text {
+  flex: 1;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #000;
+}
+
+/* Style des listes */
+.about-text ul {
+  margin-top: 1rem;
+  padding-left: 1.5rem; /* Indentation pour la liste */
+  list-style-type: disc; /* Style classique des puces */
+}
+
+.about-text li {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.about-text ul li::marker {
+  font-size: 1.2rem;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%; /* L'image prend toute la largeur du conteneur */
+  height: 300px; /* Hauteur fixe */
+  object-fit: cover; /* Coupe l'image pour qu'elle s'adapte au conteneur */
+  border-radius: 8px; /* Coins arrondis */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .about {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .about-content {
+    flex-direction: column; /* Empile le texte et l'image verticalement sur mobile */
+  }
+
+  .about-text {
+    padding: 0;
+    text-align: center; /* Centre le texte sur mobile */
+  }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+
+  .about-text ul {
+    text-align: left; /* Alignement à gauche des listes sur mobile */
+    display: inline-block; /* Pour éviter l'étalement sur toute la largeur */
+  }
+
+  .about-text li {
+    font-size: 1rem;
+  }
+
+  .about-text ul li::marker {
+    font-size: 1.1rem;
+  }
+
+  .about-image {
+    margin-top: 1rem; /* Espacement entre le texte et l'image */
+    text-align: center;
+    width: 100%;
+  }
+
+  .about-image img {
+    width: 100%;
+    height: 200px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+}

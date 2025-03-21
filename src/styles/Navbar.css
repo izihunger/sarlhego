@@ -1,0 +1,183 @@
+/* Navbar styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: #333;
+  color: white;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center items vertically */
+}
+
+.navbar--hidden {
+  transform: translateY(-100%);
+}
+
+.navbar--visible {
+  transform: translateY(0);
+}
+
+/* Logo container */
+.logo-container {
+  text-decoration: none; /* Remove underline from the link */
+  display: flex;
+  align-items: center; /* Vertically center the logo and text */
+  gap: 0.5rem; /* Add some spacing between the logo and text */
+}
+
+/* Logo image */
+.logo-image {
+  width: 40px; /* Adjust the size of the logo */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Logo text */
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* Navigation links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  align-items: center; /* Center links vertically */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+/* Navigation links */
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center; /* Center link text vertically */
+  height: 100%; /* Ensure links take full height */
+  position: relative; /* Required for pseudo-elements */
+}
+
+/* Apply underline effect only to non-phone-chip links */
+.nav-links a:not(.phone-chip)::after {
+  content: '';
+  position: absolute;
+  left: 50%; /* Start from the center */
+  bottom: -2px; /* Position the underline below the text */
+  width: 0; /* Start with no width */
+  height: 2px; /* Thickness of the underline */
+  background-color: white; /* Color of the underline */
+  transition: width 0.3s ease, left 0.3s ease; /* Smooth transition */
+}
+
+.nav-links a:not(.phone-chip):hover::after {
+  width: 100%; /* Expand to full width */
+  left: 0; /* Move to the left edge */
+}
+
+/* Burger menu styles */
+.burger {
+  display: none; /* Hide by default */
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.burger .line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Transform burger into cross */
+.burger--open .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 10px);
+}
+
+.burger--open .line:nth-child(2) {
+  opacity: 0;
+}
+
+.burger--open .line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -10px);
+}
+
+/* Phone chip styles */
+.phone-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Space between icon and number */
+  background-color: #7f8577; /* Background color of the chip */
+  padding: 0.5rem 1rem; /* Padding inside the chip */
+  border-radius: 25px; /* Rounded corners */
+  margin-left: 1rem; /* Space between the last link and the chip */
+  text-decoration: none; /* Remove underline from the link */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+}
+
+.phone-chip:hover {
+  transform: scale(1.05); /* Slightly increase size on hover */
+  background-color: #6b7064; /* Optional: Change background color on hover */
+}
+
+.phone-icon {
+  width: 20px; /* Adjust the size of the phone icon */
+  height: auto; /* Maintain aspect ratio */
+  color: white; /* Color of the phone icon */
+}
+
+.phone-number {
+  font-size: 1rem;
+  color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  .logo-text {
+    font-size: 1.2rem; /* Adjust text size for smaller screens */
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 60px; /* Adjust based on Navbar height */
+    right: 0;
+    height: calc(100vh - 60px); /* Full height minus Navbar height */
+    width: 100%;
+    background-color: #333;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    transform: translateX(100%); /* Hide the menu off-screen */
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .nav-links--open {
+    transform: translateX(0); /* Show the menu */
+  }
+
+  .burger {
+    display: flex; /* Show the burger button */
+  }
+
+  .phone-chip {
+    margin-left: 0; /* Remove margin on mobile */
+    margin-top: 1rem; /* Add space above the chip on mobile */
+  }
+
+  .nav-links--open .phone-chip {
+    display: flex; /* Ensure the chip is visible when the menu is open */
+  }
+}
