@@ -10,7 +10,7 @@
     "react-dom": "^19.0.0",
     "react-icons": "^5.4.0",
     "react-router-dom": "^7.1.5",
-    "react-scripts": "5.0.1"
+    "react-scripts": "^3.0.1"
   },
   "scripts": {
     "start": "HOST=0.0.0.0 PORT=80 react-scripts start",
@@ -39,6 +39,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "javascript-obfuscator": "^4.1.1"
   }
 }
