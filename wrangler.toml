@@ -2,11 +2,13 @@ name = "sarlhego"
 compatibility_date = "2025-03-21"
 
 workers_dev = false
-
-assets = { directory = "./build", html_handling = "force-trailing-slash"}
 upload_source_maps = false
+
+[assets]
+directory = "./build"
+html_handling = "force-trailing-slash"
 
 [[routes]]
 pattern = "sarlhego.axelhego.fr/*"
-zone_id = "axelhego.fr"
+zone_name = "axelhego.fr"
 custom_domain = true
