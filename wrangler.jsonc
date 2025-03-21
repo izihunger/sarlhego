@@ -1,7 +1,7 @@
 {
     "name": "sarlhego",
     "compatibility_date": "2025-03-21",
-    "main": "build/static/js/main.*.js",
+    "main": "build/static/js/main.cd7f6609.js",
     "assets": {
         "directory": "./build"
     }
