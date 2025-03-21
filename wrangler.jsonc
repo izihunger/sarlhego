@@ -4,5 +4,6 @@
     "main": "build/static/js/main.14f9729c.js",
     "assets": {
         "directory": "./build"
-    }
+    },
+    "type": "module"
 }
