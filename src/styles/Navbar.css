@@ -5,7 +5,7 @@
   left: 0;
   width: 100%;
   padding: 1rem 2rem;
-  background-color: #333;
+  background-color: #444444;
   color: white;
   transition: transform 0.3s ease-in-out;
   z-index: 1000;
@@ -115,7 +115,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem; /* Space between icon and number */
-  background-color: #7f8577; /* Background color of the chip */
+  background-color: #8b9582; /* Background color of the chip */
   padding: 0.5rem 1rem; /* Padding inside the chip */
   border-radius: 25px; /* Rounded corners */
   margin-left: 1rem; /* Space between the last link and the chip */
@@ -155,7 +155,7 @@
     right: 0;
     height: calc(100vh - 60px); /* Full height minus Navbar height */
     width: 100%;
-    background-color: #333;
+    background-color: #444444;
     flex-direction: column;
     align-items: center;
     justify-content: center;
